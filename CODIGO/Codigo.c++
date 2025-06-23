@@ -1,3 +1,4 @@
+//PROTOTIPO DE CÓDIGO
 #include <iostream>
 using namespace std;
 
