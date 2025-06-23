@@ -73,7 +73,7 @@ bool buscarID(Vendedor* raiz, int id)
     return buscarID(raiz->izquierdo, id) || buscarID(raiz->derecho, id);
 }
 
-//Nodo con más productos vendidos
+//Nodo con mÃ¡s productos vendidos
 Vendedor* encontrarMax(Vendedor* raiz) 
 {
     while(raiz && raiz->derecho!= NULL) 
@@ -90,7 +90,7 @@ Vendedor* eliminarPorID(Vendedor* raiz, int id)
         return NULL;
     }
 
-    // Recorremos ambos lados porque no sabemos dónde estará el ID
+    // Recorremos ambos lados porque no sabemos dÃ³nde estarÃ¡ el ID
     if(raiz->id==id)
     {
         // Caso 1: sin hijos
@@ -114,7 +114,7 @@ Vendedor* eliminarPorID(Vendedor* raiz, int id)
             return temp;
         }
 
-        // Caso 3: dos hijos, buscamos el mayor del subárbol izquierdo
+        // Caso 3: dos hijos, buscamos el mayor del subÃ¡rbol izquierdo
         Vendedor* temp=encontrarMax(raiz->izquierdo);
         raiz->id=temp->id;
         raiz->nombre=temp->nombre;
@@ -145,7 +145,7 @@ int main()
 		cout<<"\t1. Insertar vendedor\n";
         cout<<"\t2. Mostrar vendedores\n";
         cout<<"\t3. Buscar vendedor por ID\n";
-        cout<<"\t4. Eliminar vendedor (por productos vendidos)\n";
+        cout<<"\t4. Eliminar vendedor\n";
         cout<<"\t5. Mostrar segundo mejor vendedor\n";
         cout<<"\t6. Salir\n";
         cout<<"\t-------------------------------------------------\n";
@@ -227,7 +227,7 @@ int main()
 			    }
 			    else
 			    {
-			        cout<<"No se encontró un vendedor con ese ID.\n";
+			        cout<<"No se encontrÃ³ un vendedor con ese ID.\n";
 			    }
 			    cout<<"\n******Registro Actualizado******\n";
 				mostrarInorden(raiz);
